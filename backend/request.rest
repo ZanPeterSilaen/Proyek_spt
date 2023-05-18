@@ -1,0 +1,101 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "admin",
+    "email" : "admin@gmail.com",
+    "password" : "admin",
+    "confPassword" : "admin",
+    "role" : "admin"
+
+}
+
+###
+// get all users
+GET http://localhost:5000/users
+
+###
+//get single user
+
+GET http://localhost:5000/users/f5bce1c0-fc47-4cac-81a7-631e7592fe37
+
+###
+//update user
+PATCH  http://localhost:5000/users/f5bce1c0-fc47-4cac-81a7-631e7592fe37
+Content-Type: application/json
+
+{
+    "name" : "kepin update",
+    "email" : "kepin@gmail.com",
+    "password" : "",
+    "confPassword" : "",
+    "role" : "user"
+
+}
+
+###
+//delete user
+DELETE http://localhost:5000/users/c411a129-cf1e-45cf-a722-95b5f8e043f6
+
+###
+//login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kepin@gmail.com",
+    "password" : "kepin"
+} 
+
+###
+//login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password" : "admin"
+} 
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+//get all products
+
+GET http://localhost:5000/products
+
+###
+//get single products
+
+GET http://localhost:5000/products/7a411fec-2855-42d7-a2e1-38a19587c36e
+
+###
+//post data product
+
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 5",
+    "price": 900
+}
+ 
+
+###
+//post data product
+
+PATCH  http://localhost:5000/products/7a411fec-2855-42d7-a2e1-38a19587c36e
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 999
+}
+
+###
+//post data product
+
+DELETE http://localhost:5000/products/7a411fec-2855-42d7-a2e1-38a19587c36e
